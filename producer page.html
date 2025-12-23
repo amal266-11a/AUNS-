@@ -1,0 +1,94 @@
+<!--mashael shaker 445001629-->
+<!DOCTYPE html>
+<html lang="en" class="article-layout">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab 5 Mashael SHaker Text Styling & Layout (Starter)</title>
+  
+  <link rel="stylesheet" href="stylemashael.css" />
+</head>
+<body>
+<div class="abu-image">
+  <img src="abu1.png" alt="Abu">
+</div>
+  <header>
+    <h1>About the production company</h1>
+  </header>
+
+  <main>
+    <article id="article">
+      <h2>Who is Abu Dhabi Media Company?</h2>
+
+      <p class="intro">
+       Abu Dhabi Media Company is the leading media company in the United Arab Emirates, focusing on producing, developing, and distributing purposeful and distinguished content aimed at the local and Arab audience. It is based on six main pillars: Emirati affairs, children, news, entertainment, sports, and education and knowledge. The company encompasses 21 diverse media platforms, including digital, television, radio, and print. ...
+      </p>
+
+      <p>
+       It is based on <span class="highlight">six main pillars</span>: Emirati affairs, children, news, entertainment, sports, education, and knowledge. The company includes 21 diverse media platforms under its umbrella, including digital, television, radio, and print. Abu Dhabi Media's journey began in 1969 with the vision of the founding father, the late Sheikh Zayed bin Sultan Al Nahyan, may God have mercy on him.
+      </p>
+
+      <blockquote>
+       The company's vision is to be a leading and innovative company in providing media services with a global spirit and based on Emirati national culture.
+      </blockquote>
+    </article>
+
+    <aside id="sidebar">
+      <button id="toggle-aside" onclick="toggleSidebar()">Toggle Sidebar</button>
+<button onclick="incFont()">A+</button>
+<button onclick="decFont()">A-</button>
+<button id="toggle-highlight" onclick="toggleHighlight()">Toggle Highlight</button>
+<button onclick="changeTitleColor()">Change Title Color</button>
+      <h3>Some programs for kids are produced by the company</h3>
+      <ul class="custom-list">
+        <li class="majid">Majid Cartoon</a></li>
+        <li class="Zakiya">Zakiya Alzakiya</a></li>
+        <li class="Mansour">Mansour</a></li>
+      </ul>
+    </aside>
+  </main>
+\ 
+  <footer>
+      <p> All rights reserved for auns</p>
+  </footer>
+  <script >var sidebar = document.getElementById("sidebar"); 
+var article = document.getElementById("article"); 
+var btnAside = document.getElementById("toggle-aside"); 
+var btnHL = document.getElementById("toggle-highlight"); 
+function toggleSidebar() { 
+if (sidebar.style.display == "none") { 
+sidebar.style.display = ""; 
+} else { 
+sidebar.style.display = "none"; 
+} 
+}
+var size = 100; // % default font size 
+function incFont() { 
+size += 10; 
+article.style.fontSize = size + "%"; 
+} 
+function decFont() { 
+size -= 10; 
+article.style.fontSize = size + "%"; 
+}
+function toggleHighlight() { 
+var highlights = document.getElementsByClassName("highlight"); 
+for (var i = 0; i < highlights.length; i++) { 
+var el = highlights[i]; 
+if (el.style.backgroundColor == "yellow") { 
+el.style.backgroundColor = ""; 
+} else { 
+el.style.backgroundColor = "yellow"; 
+} 
+} 
+}
+function changeTitleColor() { 
+var h1 = document.querySelector("h1"); 
+if (h1.style.color == "black") { 
+h1.style.color = ""; 
+} else { 
+h1.style.color = "black"; 
+} 
+}
+</script>
+</body>
+</html>
